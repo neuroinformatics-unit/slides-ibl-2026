@@ -1,10 +1,10 @@
 ---
-title: Neuroinformatics Unit
-subtitle: 2025 Update
+title: Building software infrastructure for the community
+subtitle: IBL Meeting 2026
 author: Adam Tyson
 format:
   revealjs:
-    footer: "2025-11-07"
+    footer: "2026-05"
 my-custom-stuff:
    my-reuseable-variable: "I can use this wherever I want in the markdown, and change it in only once place :)"
 ---
