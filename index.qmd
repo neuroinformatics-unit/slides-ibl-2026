@@ -24,7 +24,7 @@ Domain-specific research software engineering team
 
 
 
-## Status - 2025
+## Team
 ::: {.fragment}
 ::: {layout-nrow=1}
 
@@ -129,40 +129,6 @@ Domain-specific research software engineering team
 [movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/)
 :::
 
-
-## `movement` example applications {.smaller}
-
-::: {layout="[[25, 25, 20, 20], [40, 20, 40]]"}
-
-::: {.fragment fragment-index=2}
-![](img/centroid_trajectory.png)
-:::
-
-::: {.fragment fragment-index=2}
-![](img/occupancy_heatmap.png)
-:::
-
-::: {.fragment fragment-index=3}
-![](img/rois.png)
-:::
-
-::: {.fragment fragment-index=3}
-![](img/head_direction_angle.png)
-:::
-
-::: {.fragment fragment-index=1}
-![](img/raw_vs_clean.png)
-:::
-
-::: {.fragment fragment-index=4}
-![](img/pupil_keypoints.png)
-:::
-
-::: {.fragment fragment-index=4}
-![](img/pupil_velocity_black.png)
-:::
-
-:::
 
 ::: aside
 [movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/) > Examples
@@ -283,20 +249,6 @@ Expanding access
   - PhD program
   - External courses
 
-## Open Software Summer School {.smaller}
-
-2025 pilot
-
-- Teach software & foster a community of users and developers
-- 44 attendees, 12 countries
-
-![](img/schedule-2025_light-mode.png){fig-align="center"}
-
-
-## 2026 event {.smaller}
-2 weeks, 4 main tracks
-
-![](img/OSSS_2026_schedule.png){fig-align="center"}
 
 ## Current priorities
 - Align multimodal data streams
