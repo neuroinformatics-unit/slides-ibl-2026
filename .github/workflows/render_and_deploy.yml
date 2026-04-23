@@ -29,12 +29,6 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7
-        with:
-          python-version: "3.13"
-          activate-environment: "true"
-
       - name: Render Quarto Project
         env:
           # Quarto will use the currently-activated venv's Python
