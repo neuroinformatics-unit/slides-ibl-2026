@@ -89,66 +89,7 @@ Domain-specific research software engineering team
 
 ![TUI: Terminal User Interface | Works cross-platform, including on HPC](img/datashuttle-tui-transfer.png){fig-align=left}
 
-# Movement
 
-
-## Markerless pose estimation
-
-
-:::: {.columns}
-
-::: {.column width="60%"}
-![](img/pose_tracking.png)
-:::
-
-::: {.column width="40%"}
-![deeplabcut.org](img/MousereachGIF.gif)
-:::
-::::
-
-
-
-## What happens after tracking?
-
-
-![](img/gap_after_tracking.png)
-
-
-## `movement`{.smaller}
-
-![](img/movement_overview.png){height=450}
-
-
-::: aside
-{{< fa download >}} ~60k downloads 
-
-{{< fa brands github >}} >25 contributors
-
-
-:::
-
-::: footer
-[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/)
-:::
-
-
-::: aside
-[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/) > Examples
-:::
-
-
-::: footer
-[Sample data](https://movement.neuroinformatics.dev/user_guide/input_output.html#sample-data): __Elevated Plus Maze__ from *Loukia Katsouri* | __Pupil Tracking__ from *Sepi Keshavarzi*.
-:::
-
-
-## Future
-
-
-- Specialised modules
-  -  Gait analysis, pupillometry, collective behaviour
-- Improved outlier detection & QC
-- Integration with neurophysiological data, leveraging NWB and pynapple
 
 
 # BrainGlobe
@@ -336,8 +277,71 @@ Established 2020 with three aims:
 [Sirmpilatze, Felder, Abdulazhanova et al. Current Biology (2026)](https://doi.org/10.1016/j.cub.2026.03.034)
 :::
 
+# Behaviour
+
+
+## Markerless pose estimation
+
+
+:::: {.columns}
+
+::: {.column width="60%"}
+![](img/pose_tracking.png)
+:::
+
+::: {.column width="40%"}
+![deeplabcut.org](img/MousereachGIF.gif)
+:::
+::::
+
+
+
+## What happens after tracking?
+
+
+![](img/gap_after_tracking.png)
+
+
+## `movement`{.smaller}
+
+![](img/movement_overview.png){height=450}
+
+
+::: aside
+{{< fa download >}} ~60k downloads 
+
+{{< fa brands github >}} >25 contributors
+
+
+:::
+
+::: footer
+[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/)
+:::
+
+
+::: aside
+[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/) > Examples
+:::
+
+
+::: footer
+[Sample data](https://movement.neuroinformatics.dev/user_guide/input_output.html#sample-data): __Elevated Plus Maze__ from *Loukia Katsouri* | __Pupil Tracking__ from *Sepi Keshavarzi*.
+:::
+
+
+## Future
+
+
+- Specialised modules
+  -  Gait analysis, pupillometry, collective behaviour
+- Improved outlier detection & QC
+- Integration with neurophysiological data, leveraging NWB and pynapple
+
 
 ## PoseInterface
+
+# Functional Imaging
 
 ## photon-mosaic
 
