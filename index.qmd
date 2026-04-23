@@ -1,58 +1,90 @@
 ---
-title: Building software infrastructure for the community
+title: Software infrastructure for the neuroscience community
 subtitle: IBL Meeting 2026
-author: Adam Tyson
+author: Adam Tyson 
 format:
   revealjs:
-    footer: "2026-05"
-my-custom-stuff:
-   my-reuseable-variable: "I can use this wherever I want in the markdown, and change it in only once place :)"
+    footer: "[neuroinformatics.dev](https://neuroinformatics.dev/)"
 ---
 
 
-## Neuroinformatics Unit
-::: {.incremental}
-Domain-specific research software engineering team
+# About us
 
-* Point of contact for help & advice
-* Formal & informal teaching, project support
-* Software development
-  * Data management, processing, visualisation & analysis
-  * Focus on accuracy, robustness, maintainability & ease of use
+## Neuroinformatics Unit{.smaller}
+
+::: {.columns}
+::: {.column width="40%"}
+- Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL (London)
 :::
-
-
-
-
-## Team
-::: {.fragment}
-::: {layout-nrow=1}
-
-![Laura Porta](img/laura_porta.png)
-
-![Chang Huan Lo](img/chang_huan_lo.png)
-
-![Joe Ziminski](img/joe_ziminski.png)
-
-![Alessandro Felder](img/alessandro_felder.png)
-
-![Niko Sirmpilatze](img/niko_sirmpilatze.png)
-
-![Igor Tatarnikov](img/igor_tatarnikov.jpg)
-
-![Sofía Miñano](img/sofia_minano.png)
+::: {.column width="60%"}
+![](img/SWC.jpg)
 :::
 :::
-::: {.fragment}
-- 2 summer interns (funded by google)
-- ~50 active collaborators/contributors
-- Develop and maintain >30 software tools
+
+## Neuroinformatics Unit{.smaller}
+
+::: {.columns}
+::: {.column width="40%"}
+- Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL (London)
+
+:::{.fragment}
+- (Systems) neuroscience & machine learning **research software engineering** group
 :::
+
+:::
+::: {.column width="60"}
+![](img/SWC_map_pin.png)
+:::
+:::
+
+
+## What we do
+:::{.incremental}
+- **Data management** (specifications, tools)
+- **Data analysis software** (anatomy, electrophysiology, functional imaging, behaviour)
+- **Collaborations** (data science, software development, productionisation)
+:::
+
+## Current projects
+:::{.incremental}
+* Data standardisation and management
+* Developer tools
+* Modelling
+* Extracellular electrophysiology analysis
+* Computational neuroanatomy
+* Video behavioural analysis
+* Multiphoton imaging analysis
+:::
+
+## Current projects
+* **Data standardisation and management**
+* Developer tools
+* Modelling
+* Extracellular electrophysiology analysis
+* **Computational neuroanatomy**
+* **Video behavioural analysis**
+* **Multiphoton imaging analysis**
+
+
 
 # Data management
 
+#
+![](img/errant-science-data-organisation.jpg){fig-align="center"}
 
-## The NeuroBlueprint specification {.smaller}
+::: footer
+[errantscience.com](https://errantscience.com/)
+:::
+
+#
+![](img/data-organisation-over-time.jpg){fig-align="center"}
+
+::: footer
+[errantscience.com](https://errantscience.com/)
+:::
+
+
+## NeuroBlueprint specification {.smaller}
 
 ![](img/NeuroBlueprint_project_tree_light.png)
 
@@ -63,36 +95,22 @@ Domain-specific research software engineering team
 
 ## `datashuttle` {.smaller}
 
-:::: {.columns}
 
-::: {.column width="60%"}
 ![](img/datashuttle-overview-light.png){fig-align=left}
-:::
 
-::: {.column width="40%"}
-
-::: {.fragment}
-- Create & validate projects
-- Sync data between machines/storage
-- Log all actions
-- In use at SWC, GCNU & labs around the world
-:::
-
-:::
-::::
 
 ::: footer
 [datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev/){fig-align="center"}
 :::
 
-## `datashuttle` TUI {.smaller}
+## `datashuttle`
 
-![TUI: Terminal User Interface | Works cross-platform, including on HPC](img/datashuttle-tui-transfer.png){fig-align=left}
-
-
+![](img/datashuttle-gif.mp4){fig-align=left}
 
 
-# BrainGlobe
+
+
+# Anatomy
 ## BrainGlobe {.smaller}
 
 ::: {.columns}
@@ -307,36 +325,9 @@ Established 2020 with three aims:
 ![](img/movement_overview.png){height=450}
 
 
-::: aside
-{{< fa download >}} ~60k downloads 
-
-{{< fa brands github >}} >25 contributors
-
-
-:::
-
 ::: footer
 [movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/)
 :::
-
-
-::: aside
-[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/) > Examples
-:::
-
-
-::: footer
-[Sample data](https://movement.neuroinformatics.dev/user_guide/input_output.html#sample-data): __Elevated Plus Maze__ from *Loukia Katsouri* | __Pupil Tracking__ from *Sepi Keshavarzi*.
-:::
-
-
-## Future
-
-
-- Specialised modules
-  -  Gait analysis, pupillometry, collective behaviour
-- Improved outlier detection & QC
-- Integration with neurophysiological data, leveraging NWB and pynapple
 
 
 ## PoseInterface
@@ -345,8 +336,49 @@ Established 2020 with three aims:
 
 ## photon-mosaic
 
+# Long-term priorities
+
+
+# Thanks
+
+## Support
+
+![](img/funders.png){fig-align="center"}
+
+## Contributors
+
+::: {style="font-size: 40%;"}
+
+Will Graham, Patrick Roddy, Adrien Berchet, Mathieu Bourdenx, bkntr, NovaFae, David Young, Sam Clothier, Gubra-ApS, Kailyn Fields, ramroomh, Samuel Diebolt, Chris Roat, Oren Amsalem, kclamar, Draga Doncila Pop, juanma9613, Jules Scholler, Iaroslavna Vasylieva, Nicolas Peschke, Justin Kiggins, Peter Sobolewski, Simão Bolota, chili-chiu, jaimergp, Sebastian Lammers, Matt Colligan, Paul Brodersen, Carter Peene, francesshei, Sean Martin, Ben Dichter, 4iar, Marco Musy, Anna Medyukhina, stegiopast, EmanPaoli, lidakanari, Alexis Arnaudon, Ziyang Liu, Philip Shamash, Christian Niedworok, Charly Rousseau, Horst Obenhaus, Chryssanthi Tsitoura, Sepiedeh Keshavarzi, Mateo Vélez-Fort, Stephen Lenzi, Rob Campbell, Alessandro Felder, Federico Claudi, Luigi Petrucco, Adam Tyson, Troy Margrie, Tiago Branco, Ruben Portugues, Joe Ziminski, Sofia Miñano, Niko Sirmpilatze, Nicholas Del Grosso, Laura Porta, Lee Cossell, Antonin Blot, David Pérez-Suárez, David Stansby,  koushik-ms, Harald Reingruber, Emily Jane Dennis, Peak, Maximilian Blacher, Hernando Martinez Vergara, Estelle, nicole-vissers, GD, Michael Kunst, Estelle Nassar, Sara Mederos, Igor Tatarnikov, Viktor Plattner, Carlo Castoldi, Jingjie Li, Guillaume Le Goc, Harry Carey, Matt Einhorn, Kimberly Meechan, Robert Kozol, Roberto, Axel Bisi, Jung Woo Kim, Saima Abdus, Saarah Hussain, Sacha Hadaway-Andreae, Presa, Henry Crosswell, Nischit Kumar, Kirato Yoshihara, Leonard Schwigon, Dinora Abdulazhanova, Katrin Haase, Dominik Heyers, Isabelle Museliak, Henrik Mouritsen, Simon Weiler, Stella Prins, Richard Dushime, Miguel Xochicale, M S P, Abdul Samad, Prisha Sharma, Farida Yusuf, Anshu Saini, Menna1812, ayush2281, BethCr, Swapnaneel Patra, Xiaoyu Deng, DwarvesEatRocks, DPWebster, Conrad, pranav33317, Biswanath Saha, Federico F., Tim Monko, Kaixiang Shuai, Giulia Paci, Marco Dalla Vecchia, Pavel Vychyk, Ishrat Zaman, Fatma S. Elsharkawy, Chang Huan Lo, Pascal Malkemper, Alireza Saeedi, Nasibeh Amini, Aref hossein Akhlaghi, Li Zhang, Leoni-Marie Webb, Nishanth B, Ardavan Shahrabi, Varun Singh, Harshdip Saha, sid-42-d, James Rowland, Kavyashah067, Aditya Gupta, Luigi Meola, Ajitesh Kumar Singh, Chandrika, Hargun Kaur, Rahul Bera, Hashbrownsss, Divyansh Gupta, Yaroslav Halchenko, Bhanushali Parth Hitesh, Harsh Bhanushali, Tushar Verma, maxstaras, DPWebster, Akseli Ilmanen, Lakshmi Sowmya, Sparshr04, Shigraf Salik, Vedant Vakharia, ishan372or, Holly Morley, Parth Chatupale, Shreecharana N, Eric Denovellis,  Iván Varela, Vaco Schiavo, Laura Schwarz, Mohamed Reda, Mikkel Roald-Arbøl, Sanjana Soni, vybhav72954, Kasra Shirvanian, Kunal Dadlani, Dhruv Yadav, angkul07, Eduardo Augusto, CeliaLrt, Animesh Sasan, Tushar Das, Dhruv Sharma, Ishaan Shaikh, Brandon Peri, Shrey Singh, Damacharla Sushma, Sumana Sree Angajala,  Shreejan Dolai, Aryan Srivastava, Alexandro Berumen, Sergio Valbuena, Matthew Scroggs, kawaho4, Andrew Moffitt, Ankush Agarwal 
+:::
 
 
 
+##
+#### Team
 
-## Long-term priorities
+::: {layout-nrow=1}
+
+![Laura Porta](img/laura_porta.png)
+
+![Chang Huan lo](img/chang_huan_lo.png)
+
+![Joe Ziminski](img/joe_ziminski.png)
+
+![Alessandro Felder](img/alessandro_felder.png)
+
+![Niko Sirmpilatze](img/niko_sirmpilatze.png)
+
+![Igor Tatarnikov](img/igor_tatarnikov.jpg)
+
+![Sofía Miñano](img/sofia_minano.png)
+:::
+
+
+:::{.fragment}
+#### More details
+
+### [neuroinformatics.dev](https://neuroinformatics.dev/)
+### [brainglobe.info](http://brainglobe.info/)
+
+:::
