@@ -85,7 +85,9 @@ Domain-specific research software engineering team
 [datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev/){fig-align="center"}
 :::
 
+## `datashuttle` TUI {.smaller}
 
+![TUI: Terminal User Interface | Works cross-platform, including on HPC](img/datashuttle-tui-transfer.png){fig-align=left}
 
 # Movement
 
@@ -178,79 +180,169 @@ Established 2020 with three aims:
 [Claudi, Petrucco, Tyson et al. JOSS (2020)](https://doi.org/10.21105/joss.02668)
 :::
 
-
-## Version 1
-
-Tools for:
-
-* Whole-brain atlas registration
-* Whole-brain cell detection
-* Analysis of implanted devices
-* 3D visualisation
-
-
-# Version 2
-Expanding access
-
-## Supporting mesoSPIM
-![](img/brainglobe-stitch.png){fig-align="center"}
-
-::: footer
-[github.com/brainglobe/brainglobe-stitch](https://github.com/brainglobe/brainglobe-stitch)
-:::
-
-## Consistent napari environment
-![](img/brainrender-napari-mouse.png){fig-align="center"}
-
-::: footer
-[github.com/brainglobe/brainrender-napari](https://github.com/brainglobe/brainrender-napari)
-:::
-
-## Support for more data types
+## Atlas registration
+### [`brainreg`](https://github.com/brainglobe/brainreg)
+### [`brainglobe-registration`](https://github.com/brainglobe/brainglobe-registration)
 ![](img/annotations_front_light_mode.png){fig-align="center"}
+
+::: footer
+[Tyson, A. L., et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Scientific Reports, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
+:::
 
 ::: footer
 [github.com/brainglobe/brainglobe-registration](https://github.com/brainglobe/brainglobe-registration)
 :::
 
+## Spatial analysis
 
-## Building novel atlases
-![](img/blackcap.gif){fig-align="center"}
+### [`brainglobe-segmentation`](https://github.com/brainglobe/brainglobe-segmentation)
+
+![](img/brainglobe-segmentation.png){.nostretch fig-align="center" width="90%"}
+
 
 ::: footer
-[Sirmpilatze, Felder, Abdulazhanova et al. bioRxiv (2025)](https://doi.org/10.1101/2025.03.04.641293)
+[Tyson, A. L., et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Scientific Reports, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
+:::
+
+## 3D cell detection
+
+### [`cellfinder`](https://github.com/brainglobe/cellfinder)
+
+![](img/cells.png){.nostretch fig-align="center" width="70%"}
+
+
+::: footer
+[Tyson, A. L. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
+:::
+
+## Visualisation
+
+### [`brainrender`](https://github.com/brainglobe/brainrender)
+
+![](img/cellfinder_small.mp4){.absolute .nostretch top="23%" width="70%" left="15%" loop="true"}
+
+
+::: footer
+[Claudi, F. et al. (2021) “Visualizing anatomically registered data with Brainrender” eLife](https://doi.org/10.7554/eLife.65751)
 :::
 
 
 
+::: footer
+[github.com/brainglobe/brainglobe-stitch](https://github.com/brainglobe/brainglobe-stitch)
+:::
 
-## Adoption and recognition
-- Over 3M downloads
-- Over 120 contributors from >70 organisations
-- 70 dependent tools
-- Winner of the 2025 Neuro – Irv and Helga Cooper Foundation Open Science Main Prize
+## More atlases
+::: {.absolute left="0%" top="25%" style="font-size: 0.55em;"}
+```{=html}
+<table>
+  <thead>
+    <tr>
+      <th></th>  
+      <th>Atlas Name</th>
+      <th>Species</th>
+      <th>Data Available</th>
+      <th>BrainGlobe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>1</td>
+        <td>Allen Mouse Common Coordinate Framework</td>
+        <td>Mouse</td>
+        <td>✅</td>
+        <td>✅</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Max Planck Zebrafish Brain Atlas</td>
+        <td>Zebrafish</td>
+        <td>✅</td>
+        <td>✅</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Duke Rat Atlas</td>
+        <td>Rat</td>
+        <td>✅</td>
+        <td>❌</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Canary Brain Atlas</td>
+        <td>Canary</td>
+        <td>✅</td>
+        <td>❌</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Population Based Ferret Brain Atlas</td>
+        <td>Ferret</td>
+        <td>✅</td>
+        <td>❌</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Normal Feline Brain atlas</td>
+        <td>Cat</td>
+        <td>❌</td>
+        <td>❌</td>
+    </tr>
+    <tr>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+    </tr>
+    <tr>
+        <td>168</td>
+        <td>Tawny Dragon Lizard Brain Atlas</td>
+        <td>Tawny Dragon</td>
+        <td>✅</td>
+        <td>❌</td>
+    </tr>
+    <tr>
+        <td>169</td>
+        <td>Squirrel Monkey Brain atlas</td>
+        <td>Squirrel Monkey</td>
+        <td>✅</td>
+        <td>❌</td>
+    </tr>
+    <tr>
+        <td>171</td>
+        <td>Pigeon Brain Atlas</td>
+        <td>Pigeon</td>
+        <td>✅</td>
+        <td>❌</td>
+    </tr>
+  </tbody>
+</table>
+```
+:::
 
 
-## Ongoing work
-- Enable rapid detection in range of 10^6^-10^7^ cells (e.g. cFos)
-- Building atlases for mouse, crab, molerat, zebrafinch, ray
-- Enabling atlas-based approaches in other fields (fly wing mechanobiology)
-- Building support for future brain atlases with Allen Institute (sponsored by AWS)
+::: {.footer}
+[https://github.com/brainglobe/brainglobe-atlasapi](https://github.com/brainglobe/brainglobe-atlasapi)
+:::
+
+## Building novel atlases
+### [`brainglobe-template-builder`](https://github.com/brainglobe/brainglobe-template-builder)
+![](img/blackcap.gif){fig-align="center"}
+
+ Eurasian blackcap (Sylvia atricapilla)
+
+::: footer
+[Sirmpilatze, Felder, Abdulazhanova et al. Current Biology (2026)](https://doi.org/10.1016/j.cub.2026.03.034)
+:::
 
 
-## Dissemination
+## PoseInterface
 
-- Documentation
-- Talks
-- Blogs
-- Papers
-- Teaching
-  - Online textbooks
-  - PhD program
-  - External courses
+## photon-mosaic
 
 
-## Current priorities
-- Align multimodal data streams
-- Enable arbitrary queries (standard data formats, metadata etc.)
-- Establish long-term collaborations with other RSE groups (IBL, Allen)
+
+
+
+## Long-term priorities
