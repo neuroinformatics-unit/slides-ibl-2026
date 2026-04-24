@@ -334,7 +334,13 @@ Established 2020 with three aims:
 
 # Functional Imaging
 
+
 ## photon-mosaic
+![](img/photon-mosaic.png){fig-align="center"}
+
+::: footer
+[github.com/photon-mosaic](https://github.com/photon-mosaic)
+:::
 
 # Long-term priorities
 
