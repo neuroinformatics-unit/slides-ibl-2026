@@ -331,6 +331,11 @@ Established 2020 with three aims:
 
 
 ## PoseInterface
+![](img/poseinterface_overview.png){fig-align="center"}
+
+::: footer
+[poseinterface.neuroinformatics.dev/](https://poseinterface.neuroinformatics.dev/)
+:::
 
 # Functional Imaging
 
