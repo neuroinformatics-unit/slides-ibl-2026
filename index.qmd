@@ -186,7 +186,7 @@ Established 2020 with three aims:
 
 ### [`cellfinder`](https://github.com/brainglobe/cellfinder)
 
-![](img/cells.png){.nostretch fig-align="center" width="70%"}
+![](img/cells.png){.nostretch fig-align="center" width="65%"}
 
 
 ::: footer
@@ -379,7 +379,9 @@ ds["speed"] = compute_speed(ds["position_smooth"])
 
 ds.to_netcdf("my_data_processed.nc")
 ```
-
+::: footer
+[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/)
+:::
 
 ## PoseInterface
 ![](img/poseinterface_overview.png){fig-align="center"}
