@@ -12,14 +12,6 @@ format:
 
 ## Neuroinformatics Unit{.smaller}
 
-::: {.columns}
-::: {.column width="40%"}
-- Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL (London)
-:::
-::: {.column width="60%"}
-![](img/SWC.jpg)
-:::
-:::
 
 ## Neuroinformatics Unit{.smaller}
 
