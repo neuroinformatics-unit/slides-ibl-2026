@@ -407,7 +407,10 @@ ds.to_netcdf("my_data_processed.nc")
 :::
 
 # Long-term priorities
-
+- Enable community collaboration
+- Reduce duplication of effort
+- Ensure interopability
+- Sustainability
 
 # Thanks
 
@@ -421,7 +424,7 @@ ds.to_netcdf("my_data_processed.nc")
 
 ![Laura Porta](img/laura_porta.png)
 
-![Chang Huan lo](img/chang_huan_lo.png)
+![Chang Huan Lo](img/chang_huan_lo.png)
 
 ![Joe Ziminski](img/joe_ziminski.png)
 
@@ -433,7 +436,7 @@ ds.to_netcdf("my_data_processed.nc")
 
 ![Sofía Miñano](img/sofia_minano.png)
 
-![Vikor Plattner](img/viktor_plattner.jpg)
+![Viktor Plattner](img/viktor_plattner.jpg)
 
 ![Harry Carey](img/harry_carey.png)
 
