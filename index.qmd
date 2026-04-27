@@ -1,58 +1,80 @@
 ---
-title: Building software infrastructure for the community
+title: Software infrastructure for the neuroscience community
 subtitle: IBL Meeting 2026
-author: Adam Tyson
+author: Adam Tyson 
 format:
   revealjs:
-    footer: "2026-05"
-my-custom-stuff:
-   my-reuseable-variable: "I can use this wherever I want in the markdown, and change it in only once place :)"
+    footer: "[neuroinformatics.dev](https://neuroinformatics.dev/)"
 ---
 
 
-## Neuroinformatics Unit
-::: {.incremental}
-Domain-specific research software engineering team
+# About us
 
-* Point of contact for help & advice
-* Formal & informal teaching, project support
-* Software development
-  * Data management, processing, visualisation & analysis
-  * Focus on accuracy, robustness, maintainability & ease of use
+## Neuroinformatics Unit{.smaller}
+
+
+## Neuroinformatics Unit{.smaller}
+
+::: {.columns}
+::: {.column width="40%"}
+- Sainsbury Wellcome Centre & Gatsby Computational Neuroscience Unit, UCL (London)
+
+:::{.fragment}
+- (Systems) neuroscience & machine learning **research software engineering** group
 :::
 
-
-
-
-## Team
-::: {.fragment}
-::: {layout-nrow=1}
-
-![Laura Porta](img/laura_porta.png)
-
-![Chang Huan Lo](img/chang_huan_lo.png)
-
-![Joe Ziminski](img/joe_ziminski.png)
-
-![Alessandro Felder](img/alessandro_felder.png)
-
-![Niko Sirmpilatze](img/niko_sirmpilatze.png)
-
-![Igor Tatarnikov](img/igor_tatarnikov.jpg)
-
-![Sofía Miñano](img/sofia_minano.png)
+:::
+::: {.column width="60"}
+![](img/SWC_map_pin.png)
 :::
 :::
-::: {.fragment}
-- 2 summer interns (funded by google)
-- ~50 active collaborators/contributors
-- Develop and maintain >30 software tools
+
+
+## What we do
+:::{.incremental}
+- **Data management** (specifications, tools)
+- **Data analysis software** (anatomy, electrophysiology, functional imaging, behaviour)
+- **Collaborations** (data science, software development, productionisation)
 :::
+
+## Current projects
+:::{.incremental}
+* Data standardisation and management
+* Developer tools
+* Extracellular electrophysiology analysis
+* Computational neuroanatomy
+* Video behavioural analysis
+* Multiphoton imaging analysis
+:::
+
+## Current projects
+* **Data standardisation and management**
+* Developer tools
+* Extracellular electrophysiology analysis
+* **Computational neuroanatomy**
+* **Video behavioural analysis**
+* **Multiphoton imaging analysis**
+
+
 
 # Data management
 
+#
+![](img/errant-science-data-organisation.jpg){fig-align="center"}
 
-## The NeuroBlueprint specification {.smaller}
+::: footer
+[errantscience.com](https://errantscience.com/)
+:::
+
+#
+![](img/data-organisation-over-time.jpg){fig-align="center"}
+
+::: footer
+[errantscience.com](https://errantscience.com/)
+:::
+
+
+## NeuroBlueprint specification {.smaller}
 
 ![](img/NeuroBlueprint_project_tree_light.png)
 
@@ -63,93 +85,51 @@ Domain-specific research software engineering team
 
 ## `datashuttle` {.smaller}
 
-:::: {.columns}
 
-::: {.column width="60%"}
 ![](img/datashuttle-overview-light.png){fig-align=left}
-:::
 
-::: {.column width="40%"}
-
-::: {.fragment}
-- Create & validate projects
-- Sync data between machines/storage
-- Log all actions
-- In use at SWC, GCNU & labs around the world
-:::
-
-:::
-::::
 
 ::: footer
 [datashuttle.neuroinformatics.dev](https://datashuttle.neuroinformatics.dev/){fig-align="center"}
 :::
 
+## `datashuttle` TUI
+
+![](img/datashuttle-gif.mp4){.absolute .nostretch width="90%" left="5%" loop="true"}
+
+## `datashuttle` scripting {.smaller}
 
 
-# Movement
+```{.python}
+from datashuttle import DataShuttle
+
+project = DataShuttle("my_first_project")
+project.make_config_file(
+    local_path=r"C:\Users\Joe\data\local\my_first_project",
+    central_path=r"C:\Users\Joe\data\central\my_first_project",
+    connection_method="local_filesystem",
+)
+
+project.create_folders(
+    top_level_folder="rawdata",
+    sub_names="sub-001",
+    ses_names="ses-001_@DATE@",
+    datatype=["behav", "ephys"]
+)
+
+project.upload_entire_project()
+
+project.download_custom(
+    top_level_folder="rawdata",
+    sub_names="all",
+    ses_names="ses-001_@*@",
+    datatype="behav"
+)
+```
 
 
-## Markerless pose estimation
 
-
-:::: {.columns}
-
-::: {.column width="60%"}
-![](img/pose_tracking.png)
-:::
-
-::: {.column width="40%"}
-![deeplabcut.org](img/MousereachGIF.gif)
-:::
-::::
-
-
-
-## What happens after tracking?
-
-
-![](img/gap_after_tracking.png)
-
-
-## `movement`{.smaller}
-
-![](img/movement_overview.png){height=450}
-
-
-::: aside
-{{< fa download >}} ~60k downloads 
-
-{{< fa brands github >}} >25 contributors
-
-
-:::
-
-::: footer
-[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/)
-:::
-
-
-::: aside
-[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/) > Examples
-:::
-
-
-::: footer
-[Sample data](https://movement.neuroinformatics.dev/user_guide/input_output.html#sample-data): __Elevated Plus Maze__ from *Loukia Katsouri* | __Pupil Tracking__ from *Sepi Keshavarzi*.
-:::
-
-
-## Future
-
-
-- Specialised modules
-  -  Gait analysis, pupillometry, collective behaviour
-- Improved outlier detection & QC
-- Integration with neurophysiological data, leveraging NWB and pynapple
-
-
-# BrainGlobe
+# Anatomy
 ## BrainGlobe {.smaller}
 
 ::: {.columns}
@@ -178,79 +158,292 @@ Established 2020 with three aims:
 [Claudi, Petrucco, Tyson et al. JOSS (2020)](https://doi.org/10.21105/joss.02668)
 :::
 
-
-## Version 1
-
-Tools for:
-
-* Whole-brain atlas registration
-* Whole-brain cell detection
-* Analysis of implanted devices
-* 3D visualisation
-
-
-# Version 2
-Expanding access
-
-## Supporting mesoSPIM
-![](img/brainglobe-stitch.png){fig-align="center"}
-
-::: footer
-[github.com/brainglobe/brainglobe-stitch](https://github.com/brainglobe/brainglobe-stitch)
-:::
-
-## Consistent napari environment
-![](img/brainrender-napari-mouse.png){fig-align="center"}
-
-::: footer
-[github.com/brainglobe/brainrender-napari](https://github.com/brainglobe/brainrender-napari)
-:::
-
-## Support for more data types
+## Atlas registration
+### [`brainreg`](https://github.com/brainglobe/brainreg)
+### [`brainglobe-registration`](https://github.com/brainglobe/brainglobe-registration)
 ![](img/annotations_front_light_mode.png){fig-align="center"}
+
+::: footer
+[Tyson, A. L., et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Scientific Reports, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
+:::
 
 ::: footer
 [github.com/brainglobe/brainglobe-registration](https://github.com/brainglobe/brainglobe-registration)
 :::
 
+## Spatial analysis
 
-## Building novel atlases
-![](img/blackcap.gif){fig-align="center"}
+### [`brainglobe-segmentation`](https://github.com/brainglobe/brainglobe-segmentation)
+
+![](img/brainglobe-segmentation.png){.nostretch fig-align="center" width="90%"}
+
 
 ::: footer
-[Sirmpilatze, Felder, Abdulazhanova et al. bioRxiv (2025)](https://doi.org/10.1101/2025.03.04.641293)
+[Tyson, A. L., et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Scientific Reports, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
+:::
+
+## 3D cell detection
+
+### [`cellfinder`](https://github.com/brainglobe/cellfinder)
+
+![](img/cells.png){.nostretch fig-align="center" width="65%"}
+
+
+::: footer
+[Tyson, A. L. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
+:::
+
+## Visualisation
+
+### [`brainrender`](https://github.com/brainglobe/brainrender)
+
+![](img/cellfinder_small.mp4){.absolute .nostretch width="80%" left="10%" loop="true"}
+
+
+::: footer
+[Claudi, F. et al. (2021) “Visualizing anatomically registered data with Brainrender” eLife](https://doi.org/10.7554/eLife.65751)
 :::
 
 
 
+::: footer
+[github.com/brainglobe/brainglobe-stitch](https://github.com/brainglobe/brainglobe-stitch)
+:::
 
-## Adoption and recognition
-- Over 3M downloads
-- Over 120 contributors from >70 organisations
-- 70 dependent tools
-- Winner of the 2025 Neuro – Irv and Helga Cooper Foundation Open Science Main Prize
+## More atlases
+::: {.absolute left="0%" top="25%" style="font-size: 0.55em;"}
+```{=html}
+<table>
+  <thead>
+    <tr>
+      <th></th>  
+      <th>Atlas Name</th>
+      <th>Species</th>
+      <th>Data Available</th>
+      <th>BrainGlobe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>1</td>
+        <td>Allen Mouse Common Coordinate Framework</td>
+        <td>Mouse</td>
+        <td>✅</td>
+        <td>✅</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Max Planck Zebrafish Brain Atlas</td>
+        <td>Zebrafish</td>
+        <td>✅</td>
+        <td>✅</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Duke Rat Atlas</td>
+        <td>Rat</td>
+        <td>✅</td>
+        <td>❌</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Canary Brain Atlas</td>
+        <td>Canary</td>
+        <td>✅</td>
+        <td>❌</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Population Based Ferret Brain Atlas</td>
+        <td>Ferret</td>
+        <td>✅</td>
+        <td>❌</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Normal Feline Brain atlas</td>
+        <td>Cat</td>
+        <td>❌</td>
+        <td>❌</td>
+    </tr>
+    <tr>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+    </tr>
+    <tr>
+        <td>168</td>
+        <td>Tawny Dragon Lizard Brain Atlas</td>
+        <td>Tawny Dragon</td>
+        <td>✅</td>
+        <td>❌</td>
+    </tr>
+    <tr>
+        <td>169</td>
+        <td>Squirrel Monkey Brain atlas</td>
+        <td>Squirrel Monkey</td>
+        <td>✅</td>
+        <td>❌</td>
+    </tr>
+    <tr>
+        <td>171</td>
+        <td>Pigeon Brain Atlas</td>
+        <td>Pigeon</td>
+        <td>✅</td>
+        <td>❌</td>
+    </tr>
+  </tbody>
+</table>
+```
+:::
 
 
-## Ongoing work
-- Enable rapid detection in range of 10^6^-10^7^ cells (e.g. cFos)
-- Building atlases for mouse, crab, molerat, zebrafinch, ray
-- Enabling atlas-based approaches in other fields (fly wing mechanobiology)
-- Building support for future brain atlases with Allen Institute (sponsored by AWS)
+::: {.footer}
+[https://github.com/brainglobe/brainglobe-atlasapi](https://github.com/brainglobe/brainglobe-atlasapi)
+:::
+
+## Building novel atlases
+### [`brainglobe-template-builder`](https://github.com/brainglobe/brainglobe-template-builder)
+![](img/blackcap.gif){fig-align="center"}
+
+ Eurasian blackcap (Sylvia atricapilla)
+
+::: footer
+[Sirmpilatze, Felder, Abdulazhanova et al. Current Biology (2026)](https://doi.org/10.1016/j.cub.2026.03.034)
+:::
+
+# Behaviour
 
 
-## Dissemination
-
-- Documentation
-- Talks
-- Blogs
-- Papers
-- Teaching
-  - Online textbooks
-  - PhD program
-  - External courses
+## Markerless pose estimation
 
 
-## Current priorities
-- Align multimodal data streams
-- Enable arbitrary queries (standard data formats, metadata etc.)
-- Establish long-term collaborations with other RSE groups (IBL, Allen)
+:::: {.columns}
+
+::: {.column width="60%"}
+![](img/pose_tracking.png)
+:::
+
+::: {.column width="40%"}
+![deeplabcut.org](img/MousereachGIF.gif)
+:::
+::::
+
+
+
+## What happens after tracking?
+
+
+![](img/gap_after_tracking.png)
+
+
+## `movement`
+
+![](img/movement_overview.png){height=450}
+
+
+::: footer
+[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/)
+:::
+
+## `movement` GUI
+
+![](img/movement_rois.mp4){.absolute .nostretch width="90%" left="5%" loop="true"}
+
+::: footer
+[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/)
+:::
+
+
+## `movement` scripting 
+
+
+```{.python}
+from movement.io import load_dataset
+from movement.filtering import rolling_filter
+from movement.kinematics import compute_speed
+
+ds = load_dataset(
+  "path/to/my_data.h5", source_software="DeepLabCut", fps=30
+)
+
+ds = ds.sel(time=slice(600, 2400))
+
+ds["position_smooth"] = rolling_filter(
+  ds["position"], window=5, statistic="median"
+)
+
+ds["speed"] = compute_speed(ds["position_smooth"])
+
+ds.to_netcdf("my_data_processed.nc")
+```
+::: footer
+[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/)
+:::
+
+## PoseInterface
+![](img/poseinterface_overview.png){fig-align="center"}
+
+::: footer
+[poseinterface.neuroinformatics.dev](https://poseinterface.neuroinformatics.dev/)
+:::
+
+# Functional Imaging
+
+
+## photon-mosaic
+![](img/photon-mosaic.png){fig-align="center"}
+
+::: footer
+[github.com/photon-mosaic](https://github.com/photon-mosaic)
+:::
+
+## Long-term priorities
+- Enable community collaboration
+- Reduce duplication of effort
+- Ensure interopability
+- Sustainability
+
+# Thanks
+
+## Support
+
+![](img/funders.png){fig-align="center"}
+
+## Team {.smaller}
+
+::: {layout-nrow=2}
+
+![Laura Porta](img/laura_porta.png)
+
+![Chang Huan Lo](img/chang_huan_lo.png)
+
+![Joe Ziminski](img/joe_ziminski.png)
+
+![Alessandro Felder](img/alessandro_felder.png)
+
+![Niko Sirmpilatze](img/niko_sirmpilatze.png)
+
+![Igor Tatarnikov](img/igor_tatarnikov.jpg)
+
+![Sofía Miñano](img/sofia_minano.png)
+
+![Viktor Plattner](img/viktor_plattner.jpg)
+
+![Harry Carey](img/harry_carey.png)
+
+![Saarah Hussain](img/saarah_hussain.jpg)
+
+![Amirreza Bahramani](img/amirreza_bahramani.jpg)
+
+![Jung Woo Kim](img/jung_woo_kim.jpg)
+:::
+
+## Contributors
+
+::: {style="font-size: 45%;"}
+
+Will Graham, Patrick Roddy, Adrien Berchet, Mathieu Bourdenx, bkntr, NovaFae, David Young, Sam Clothier, Gubra-ApS, Kailyn Fields, ramroomh, Samuel Diebolt, Chris Roat, Oren Amsalem, kclamar, Draga Doncila Pop, juanma9613, Jules Scholler, Iaroslavna Vasylieva, Nicolas Peschke, Justin Kiggins, Peter Sobolewski, Simão Bolota, chili-chiu, jaimergp, Sebastian Lammers, Matt Colligan, Paul Brodersen, Carter Peene, francesshei, Sean Martin, Ben Dichter, 4iar, Marco Musy, Anna Medyukhina, stegiopast, EmanPaoli, lidakanari, Alexis Arnaudon, Ziyang Liu, Philip Shamash, Christian Niedworok, Charly Rousseau, Horst Obenhaus, Chryssanthi Tsitoura, Sepiedeh Keshavarzi, Mateo Vélez-Fort, Stephen Lenzi, Rob Campbell, Alessandro Felder, Federico Claudi, Luigi Petrucco, Adam Tyson, Troy Margrie, Tiago Branco, Ruben Portugues, Joe Ziminski, Sofia Miñano, Niko Sirmpilatze, Nicholas Del Grosso, Laura Porta, Lee Cossell, Antonin Blot, David Pérez-Suárez, David Stansby,  koushik-ms, Harald Reingruber, Emily Jane Dennis, Peak, Maximilian Blacher, Hernando Martinez Vergara, Estelle, nicole-vissers, GD, Michael Kunst, Estelle Nassar, Sara Mederos, Igor Tatarnikov, Viktor Plattner, Carlo Castoldi, Jingjie Li, Guillaume Le Goc, Harry Carey, Matt Einhorn, Kimberly Meechan, Robert Kozol, Roberto, Axel Bisi, Jung Woo Kim, Saima Abdus, Saarah Hussain, Sacha Hadaway-Andreae, Presa, Henry Crosswell, Nischit Kumar, Kirato Yoshihara, Leonard Schwigon, Dinora Abdulazhanova, Katrin Haase, Dominik Heyers, Isabelle Museliak, Henrik Mouritsen, Simon Weiler, Stella Prins, Richard Dushime, Miguel Xochicale, M S P, Abdul Samad, Prisha Sharma, Farida Yusuf, Anshu Saini, Menna1812, ayush2281, BethCr, Swapnaneel Patra, Xiaoyu Deng, DwarvesEatRocks, DPWebster, Conrad, pranav33317, Biswanath Saha, Federico F, Tim Monko, Kaixiang Shuai, Giulia Paci, Marco Dalla Vecchia, Pavel Vychyk, Ishrat Zaman, Fatma S. Elsharkawy, Chang Huan Lo, Pascal Malkemper, Alireza Saeedi, Nasibeh Amini, Aref hossein Akhlaghi, Li Zhang, Leoni-Marie Webb, Nishanth B, Ardavan Shahrabi, Varun Singh, Harshdip Saha, sid-42-d, James Rowland, Kavyashah067, Aditya Gupta, Luigi Meola, Ajitesh Kumar Singh, Chandrika, Hargun Kaur, Rahul Bera, Hashbrownsss, Divyansh Gupta, Yaroslav Halchenko, Bhanushali Parth Hitesh, Harsh Bhanushali, Tushar Verma, maxstaras, Akseli Ilmanen, Lakshmi Sowmya, Sparshr04, Shigraf Salik, Vedant Vakharia, ishan372or, Holly Morley, Parth Chatupale, Shreecharana N, Eric Denovellis,  Iván Varela, Vaco Schiavo, Laura Schwarz, Mohamed Reda, Mikkel Roald-Arbøl, Sanjana Soni, vybhav72954, Kasra Shirvanian, Kunal Dadlani, Dhruv Yadav, angkul07, Eduardo Augusto, CeliaLrt, Animesh Sasan, Tushar Das, Dhruv Sharma, Ishaan Shaikh, Brandon Peri, Shrey Singh, Damacharla Sushma, Sumana Sree Angajala,  Shreejan Dolai, Aryan Srivastava, Alexandro Berumen, Alessio Buccino, Arielle Leon, Sergio Valbuena, Matthew Scroggs, kawaho4, Andrew Moffitt, Ankush Agarwal
+:::
