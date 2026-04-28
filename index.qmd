@@ -69,7 +69,7 @@ Established 2020 with three aims:
 [Claudi, Petrucco, Tyson et al. JOSS (2020)](https://doi.org/10.21105/joss.02668)
 :::
 
-## Atlas registration
+## Image processing
 ### [`brainreg`](https://github.com/brainglobe/brainreg)
 ### [`brainglobe-registration`](https://github.com/brainglobe/brainglobe-registration)
 ![](img/annotations_front_light_mode.png){fig-align="center"}
@@ -82,18 +82,8 @@ Established 2020 with three aims:
 [github.com/brainglobe/brainglobe-registration](https://github.com/brainglobe/brainglobe-registration)
 :::
 
-## Spatial analysis
 
-### [`brainglobe-segmentation`](https://github.com/brainglobe/brainglobe-segmentation)
-
-![](img/brainglobe-segmentation.png){.nostretch fig-align="center" width="90%"}
-
-
-::: footer
-[Tyson, A. L., et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Scientific Reports, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
-:::
-
-## 3D cell detection
+## Analysis
 
 ### [`cellfinder`](https://github.com/brainglobe/cellfinder)
 
@@ -215,7 +205,7 @@ Established 2020 with three aims:
 [https://github.com/brainglobe/brainglobe-atlasapi](https://github.com/brainglobe/brainglobe-atlasapi)
 :::
 
-## Building novel atlases
+## Nvel atlases
 ### [`brainglobe-template-builder`](https://github.com/brainglobe/brainglobe-template-builder)
 ![](img/blackcap.gif){fig-align="center"}
 
