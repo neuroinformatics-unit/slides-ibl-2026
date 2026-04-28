@@ -7,8 +7,6 @@ format:
     footer: "[neuroinformatics.dev](https://neuroinformatics.dev/)"
 ---
 
-# Aim
-
 #
 
 To build build sustainable, general-purpose software infrastructure for the neuroscience community
