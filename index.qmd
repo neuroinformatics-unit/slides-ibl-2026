@@ -244,26 +244,33 @@ Established 2020 with three aims:
 [Sirmpilatze, Felder, Abdulazhanova et al. Current Biology (2026)](https://doi.org/10.1016/j.cub.2026.03.034)
 :::
 
+## Community
+:::{.incremental}
+* Fully open development
+* Public development meetings
+* Responsive user & developer forums
+* Focus on ease of use & accessibility
+* &gt;3k contributions from >150 scientists & engineers
+* &gt;3M downloads
+:::
+
+
 # Behaviour
 
 
 ## Markerless pose estimation
 
+::: {layout="[[45, 55]]" layout-valign="center"}
 
-:::: {.columns}
-
-::: {.column width="60%"}
 ![](img/pose_tracking.png)
+
+![[sleap.ai](https://sleap.ai/) (Pereira et al. 2022)](img/sleap_video.gif)
+
 :::
 
-::: {.column width="40%"}
-![deeplabcut.org](img/MousereachGIF.gif)
-:::
-::::
 
 
-
-## What happens after tracking?
+## Markerless pose estimation
 
 
 ![](img/gap_after_tracking.png)
@@ -281,6 +288,8 @@ Established 2020 with three aims:
 ## `movement` GUI
 
 ![](img/movement_rois.mp4){.absolute .nostretch width="90%" left="5%" loop="true"}
+
+
 
 ::: footer
 [movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/)
