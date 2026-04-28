@@ -211,40 +211,22 @@ Adam Tyson
 </div>
 
 </section>
+<section id="section" class="title-slide slide level1 center">
+<h1></h1>
+<p>To build build sustainable, general-purpose software infrastructure for the neuroscience community</p>
+</section>
+
 <section>
 <section id="about-us" class="title-slide slide level1 center">
 <h1>About us</h1>
 
 </section>
-<section id="neuroinformatics-unit" class="slide level2 smaller">
+<section id="neuroinformatics-unit" class="slide level2">
 <h2>Neuroinformatics Unit</h2>
-</section>
-<section id="neuroinformatics-unit-1" class="slide level2 smaller">
-<h2>Neuroinformatics Unit</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<ul>
-<li>Sainsbury Wellcome Centre &amp; Gatsby Computational Neuroscience Unit, UCL (London)</li>
-</ul>
-<div class="fragment">
-<ul>
-<li>(Systems) neuroscience &amp; machine learning <strong>research software engineering</strong> group</li>
-</ul>
-</div>
-</div><div class="column" style="width:60;">
-<p><img data-src="img/SWC_map_pin.png"></p>
-</div></div>
+<p>(Systems) neuroscience &amp; machine learning <strong>research software engineering</strong> group</p>
 </section>
 <section id="what-we-do" class="slide level2">
 <h2>What we do</h2>
-<ul>
-<li class="fragment"><strong>Data management</strong> (specifications, tools)</li>
-<li class="fragment"><strong>Data analysis software</strong> (anatomy, electrophysiology, functional imaging, behaviour)</li>
-<li class="fragment"><strong>Collaborations</strong> (data science, software development, productionisation)</li>
-</ul>
-</section>
-<section id="current-projects" class="slide level2">
-<h2>Current projects</h2>
 <ul>
 <li class="fragment">Data standardisation and management</li>
 <li class="fragment">Developer tools</li>
@@ -254,82 +236,16 @@ Adam Tyson
 <li class="fragment">Multiphoton imaging analysis</li>
 </ul>
 </section>
-<section id="current-projects-1" class="slide level2">
-<h2>Current projects</h2>
+<section id="what-we-do-1" class="slide level2">
+<h2>What we do</h2>
 <ul>
-<li><strong>Data standardisation and management</strong></li>
+<li>Data standardisation and management</li>
 <li>Developer tools</li>
 <li>Extracellular electrophysiology analysis</li>
 <li><strong>Computational neuroanatomy</strong></li>
 <li><strong>Video behavioural analysis</strong></li>
 <li><strong>Multiphoton imaging analysis</strong></li>
 </ul>
-</section></section>
-<section id="data-management" class="title-slide slide level1 center">
-<h1>Data management</h1>
-
-</section>
-
-<section id="section" class="title-slide slide level1 center">
-<h1></h1>
-
-<img data-src="img/errant-science-data-organisation.jpg" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
-<p><a href="https://errantscience.com/">errantscience.com</a></p>
-</div>
-</section>
-
-<section>
-<section id="section-1" class="title-slide slide level1 center">
-<h1></h1>
-
-<img data-src="img/data-organisation-over-time.jpg" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
-<p><a href="https://errantscience.com/">errantscience.com</a></p>
-</div>
-</section>
-<section id="neuroblueprint-specification" class="slide level2 smaller">
-<h2>NeuroBlueprint specification</h2>
-
-<img data-src="img/NeuroBlueprint_project_tree_light.png" class="r-stretch"><div class="footer">
-<p><a href="https://neuroblueprint.neuroinformatics.dev/" data-fig-align="center">neuroblueprint.neuroinformatics.dev</a></p>
-</div>
-</section>
-<section id="datashuttle" class="slide level2 smaller">
-<h2><code>datashuttle</code></h2>
-
-<img data-src="img/datashuttle-overview-light.png" class="quarto-figure quarto-figure-left r-stretch"><div class="footer">
-<p><a href="https://datashuttle.neuroinformatics.dev/" data-fig-align="center">datashuttle.neuroinformatics.dev</a></p>
-</div>
-</section>
-<section id="datashuttle-tui" class="slide level2">
-<h2><code>datashuttle</code> TUI</h2>
-<p><video data-src="img/datashuttle-gif.mp4" class="absolute nostretch" style="left: 5%; width: 90%; " loop="true" controls=""><a href="img/datashuttle-gif.mp4">Video</a></video></p>
-</section>
-<section id="datashuttle-scripting" class="slide level2 smaller">
-<h2><code>datashuttle</code> scripting</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">from</span> datashuttle <span class="im">import</span> DataShuttle</span>
-<span id="cb1-2"><a href=""></a></span>
-<span id="cb1-3"><a href=""></a>project <span class="op">=</span> DataShuttle(<span class="st">"my_first_project"</span>)</span>
-<span id="cb1-4"><a href=""></a>project.make_config_file(</span>
-<span id="cb1-5"><a href=""></a>    local_path<span class="op">=</span><span class="vs">r"C:</span><span class="er">\</span><span class="vs">Users</span><span class="er">\</span><span class="vs">Joe</span><span class="dv">\d</span><span class="vs">ata</span><span class="er">\</span><span class="vs">local</span><span class="dv">\m</span><span class="vs">y_first_project"</span>,</span>
-<span id="cb1-6"><a href=""></a>    central_path<span class="op">=</span><span class="vs">r"C:</span><span class="er">\</span><span class="vs">Users</span><span class="er">\</span><span class="vs">Joe</span><span class="dv">\d</span><span class="vs">ata</span><span class="er">\</span><span class="vs">central</span><span class="dv">\m</span><span class="vs">y_first_project"</span>,</span>
-<span id="cb1-7"><a href=""></a>    connection_method<span class="op">=</span><span class="st">"local_filesystem"</span>,</span>
-<span id="cb1-8"><a href=""></a>)</span>
-<span id="cb1-9"><a href=""></a></span>
-<span id="cb1-10"><a href=""></a>project.create_folders(</span>
-<span id="cb1-11"><a href=""></a>    top_level_folder<span class="op">=</span><span class="st">"rawdata"</span>,</span>
-<span id="cb1-12"><a href=""></a>    sub_names<span class="op">=</span><span class="st">"sub-001"</span>,</span>
-<span id="cb1-13"><a href=""></a>    ses_names<span class="op">=</span><span class="st">"ses-001_@DATE@"</span>,</span>
-<span id="cb1-14"><a href=""></a>    datatype<span class="op">=</span>[<span class="st">"behav"</span>, <span class="st">"ephys"</span>]</span>
-<span id="cb1-15"><a href=""></a>)</span>
-<span id="cb1-16"><a href=""></a></span>
-<span id="cb1-17"><a href=""></a>project.upload_entire_project()</span>
-<span id="cb1-18"><a href=""></a></span>
-<span id="cb1-19"><a href=""></a>project.download_custom(</span>
-<span id="cb1-20"><a href=""></a>    top_level_folder<span class="op">=</span><span class="st">"rawdata"</span>,</span>
-<span id="cb1-21"><a href=""></a>    sub_names<span class="op">=</span><span class="st">"all"</span>,</span>
-<span id="cb1-22"><a href=""></a>    ses_names<span class="op">=</span><span class="st">"ses-001_@*@"</span>,</span>
-<span id="cb1-23"><a href=""></a>    datatype<span class="op">=</span><span class="st">"behav"</span></span>
-<span id="cb1-24"><a href=""></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section></section>
 <section>
 <section id="anatomy" class="title-slide slide level1 center">
@@ -358,8 +274,8 @@ Adam Tyson
 <p><a href="https://doi.org/10.21105/joss.02668">Claudi, Petrucco, Tyson et al.&nbsp;JOSS (2020)</a></p>
 </div>
 </section>
-<section id="atlas-registration" class="slide level2">
-<h2>Atlas registration</h2>
+<section id="image-processing" class="slide level2">
+<h2>Image processing</h2>
 <h3 id="brainreg"><a href="https://github.com/brainglobe/brainreg"><code>brainreg</code></a></h3>
 <h3 id="brainglobe-registration"><a href="https://github.com/brainglobe/brainglobe-registration"><code>brainglobe-registration</code></a></h3>
 
@@ -370,20 +286,8 @@ Adam Tyson
 <p><a href="https://github.com/brainglobe/brainglobe-registration">github.com/brainglobe/brainglobe-registration</a></p>
 </div>
 </section>
-<section id="spatial-analysis" class="slide level2">
-<h2>Spatial analysis</h2>
-<h3 id="brainglobe-segmentation"><a href="https://github.com/brainglobe/brainglobe-segmentation"><code>brainglobe-segmentation</code></a></h3>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/brainglobe-segmentation.png" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
-</figure>
-</div>
-<div class="footer">
-<p><a href="https://doi.org/10.1038/s41598-021-04676-9">Tyson, A. L., et al.&nbsp;(2022) “Accurate determination of marker location within whole-brain microscopy images” Scientific Reports, 12, 867</a></p>
-</div>
-</section>
-<section id="d-cell-detection" class="slide level2">
-<h2>3D cell detection</h2>
+<section id="analysis" class="slide level2">
+<h2>Analysis</h2>
 <h3 id="cellfinder"><a href="https://github.com/brainglobe/cellfinder"><code>cellfinder</code></a></h3>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -405,105 +309,25 @@ Adam Tyson
 <p><a href="https://github.com/brainglobe/brainglobe-stitch">github.com/brainglobe/brainglobe-stitch</a></p>
 </div>
 </section>
-<section id="more-atlases" class="slide level2">
-<h2>More atlases</h2>
-<div class="absolute" style="font-size: 0.55em;top: 25%; left: 0%; ">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Atlas Name</th>
-<th data-quarto-table-cell-role="th">Species</th>
-<th data-quarto-table-cell-role="th">Data Available</th>
-<th data-quarto-table-cell-role="th">BrainGlobe</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>Allen Mouse Common Coordinate Framework</td>
-<td>Mouse</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>Max Planck Zebrafish Brain Atlas</td>
-<td>Zebrafish</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>Duke Rat Atlas</td>
-<td>Rat</td>
-<td>✅</td>
-<td>❌</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>Canary Brain Atlas</td>
-<td>Canary</td>
-<td>✅</td>
-<td>❌</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>Population Based Ferret Brain Atlas</td>
-<td>Ferret</td>
-<td>✅</td>
-<td>❌</td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>Normal Feline Brain atlas</td>
-<td>Cat</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr class="odd">
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr class="even">
-<td>168</td>
-<td>Tawny Dragon Lizard Brain Atlas</td>
-<td>Tawny Dragon</td>
-<td>✅</td>
-<td>❌</td>
-</tr>
-<tr class="odd">
-<td>169</td>
-<td>Squirrel Monkey Brain atlas</td>
-<td>Squirrel Monkey</td>
-<td>✅</td>
-<td>❌</td>
-</tr>
-<tr class="even">
-<td>171</td>
-<td>Pigeon Brain Atlas</td>
-<td>Pigeon</td>
-<td>✅</td>
-<td>❌</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="footer">
-<p><a href="https://github.com/brainglobe/brainglobe-atlasapi">https://github.com/brainglobe/brainglobe-atlasapi</a></p>
-</div>
-</section>
-<section id="building-novel-atlases" class="slide level2">
-<h2>Building novel atlases</h2>
+<section id="novel-atlases" class="slide level2">
+<h2>Novel atlases</h2>
 <h3 id="brainglobe-template-builder"><a href="https://github.com/brainglobe/brainglobe-template-builder"><code>brainglobe-template-builder</code></a></h3>
 
 <img data-src="img/blackcap.gif" class="quarto-figure quarto-figure-center r-stretch"><p>Eurasian blackcap (Sylvia atricapilla)</p>
 <div class="footer">
 <p><a href="https://doi.org/10.1016/j.cub.2026.03.034">Sirmpilatze, Felder, Abdulazhanova et al.&nbsp;Current Biology (2026)</a></p>
 </div>
+</section>
+<section id="community" class="slide level2">
+<h2>Community</h2>
+<ul>
+<li class="fragment">Focus on ease of use &amp; accessibility</li>
+<li class="fragment">Responsive user &amp; developer forums</li>
+<li class="fragment">Fully open development</li>
+<li class="fragment">Public development meetings</li>
+<li class="fragment">&gt;3k contributions from &gt;150 scientists &amp; engineers</li>
+<li class="fragment">&gt;3M downloads</li>
+</ul>
 </section></section>
 <section>
 <section id="behaviour" class="title-slide slide level1 center">
@@ -512,20 +336,24 @@ Adam Tyson
 </section>
 <section id="markerless-pose-estimation" class="slide level2">
 <h2>Markerless pose estimation</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
+<div class="quarto-layout-panel" data-layout="[[45, 55]]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 45.0%;justify-content: center;">
 <p><img data-src="img/pose_tracking.png"></p>
-</div><div class="column" style="width:40%;">
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 55.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/MousereachGIF.gif"></p>
-<figcaption>deeplabcut.org</figcaption>
+<p><img data-src="img/sleap_video.gif"></p>
+<figcaption><a href="https://sleap.ai/">sleap.ai</a> (Pereira et al.&nbsp;2022)</figcaption>
 </figure>
 </div>
-</div></div>
+</div>
+</div>
+</div>
 </section>
-<section id="what-happens-after-tracking" class="slide level2">
-<h2>What happens after tracking?</h2>
+<section id="markerless-pose-estimation-1" class="slide level2">
+<h2>Markerless pose estimation</h2>
 
 <img data-src="img/gap_after_tracking.png" class="r-stretch"></section>
 <section id="movement" class="slide level2">
@@ -544,23 +372,23 @@ Adam Tyson
 </section>
 <section id="movement-scripting" class="slide level2">
 <h2><code>movement</code> scripting</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a><span class="im">from</span> movement.io <span class="im">import</span> load_dataset</span>
-<span id="cb2-2"><a href=""></a><span class="im">from</span> movement.filtering <span class="im">import</span> rolling_filter</span>
-<span id="cb2-3"><a href=""></a><span class="im">from</span> movement.kinematics <span class="im">import</span> compute_speed</span>
-<span id="cb2-4"><a href=""></a></span>
-<span id="cb2-5"><a href=""></a>ds <span class="op">=</span> load_dataset(</span>
-<span id="cb2-6"><a href=""></a>  <span class="st">"path/to/my_data.h5"</span>, source_software<span class="op">=</span><span class="st">"DeepLabCut"</span>, fps<span class="op">=</span><span class="dv">30</span></span>
-<span id="cb2-7"><a href=""></a>)</span>
-<span id="cb2-8"><a href=""></a></span>
-<span id="cb2-9"><a href=""></a>ds <span class="op">=</span> ds.sel(time<span class="op">=</span><span class="bu">slice</span>(<span class="dv">600</span>, <span class="dv">2400</span>))</span>
-<span id="cb2-10"><a href=""></a></span>
-<span id="cb2-11"><a href=""></a>ds[<span class="st">"position_smooth"</span>] <span class="op">=</span> rolling_filter(</span>
-<span id="cb2-12"><a href=""></a>  ds[<span class="st">"position"</span>], window<span class="op">=</span><span class="dv">5</span>, statistic<span class="op">=</span><span class="st">"median"</span></span>
-<span id="cb2-13"><a href=""></a>)</span>
-<span id="cb2-14"><a href=""></a></span>
-<span id="cb2-15"><a href=""></a>ds[<span class="st">"speed"</span>] <span class="op">=</span> compute_speed(ds[<span class="st">"position_smooth"</span>])</span>
-<span id="cb2-16"><a href=""></a></span>
-<span id="cb2-17"><a href=""></a>ds.to_netcdf(<span class="st">"my_data_processed.nc"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">from</span> movement.io <span class="im">import</span> load_dataset</span>
+<span id="cb1-2"><a href=""></a><span class="im">from</span> movement.filtering <span class="im">import</span> rolling_filter</span>
+<span id="cb1-3"><a href=""></a><span class="im">from</span> movement.kinematics <span class="im">import</span> compute_speed</span>
+<span id="cb1-4"><a href=""></a></span>
+<span id="cb1-5"><a href=""></a>ds <span class="op">=</span> load_dataset(</span>
+<span id="cb1-6"><a href=""></a>  <span class="st">"path/to/my_data.h5"</span>, source_software<span class="op">=</span><span class="st">"DeepLabCut"</span>, fps<span class="op">=</span><span class="dv">30</span></span>
+<span id="cb1-7"><a href=""></a>)</span>
+<span id="cb1-8"><a href=""></a></span>
+<span id="cb1-9"><a href=""></a>ds <span class="op">=</span> ds.sel(time<span class="op">=</span><span class="bu">slice</span>(<span class="dv">600</span>, <span class="dv">2400</span>))</span>
+<span id="cb1-10"><a href=""></a></span>
+<span id="cb1-11"><a href=""></a>ds[<span class="st">"position_smooth"</span>] <span class="op">=</span> rolling_filter(</span>
+<span id="cb1-12"><a href=""></a>  ds[<span class="st">"position"</span>], window<span class="op">=</span><span class="dv">5</span>, statistic<span class="op">=</span><span class="st">"median"</span></span>
+<span id="cb1-13"><a href=""></a>)</span>
+<span id="cb1-14"><a href=""></a></span>
+<span id="cb1-15"><a href=""></a>ds[<span class="st">"speed"</span>] <span class="op">=</span> compute_speed(ds[<span class="st">"position_smooth"</span>])</span>
+<span id="cb1-16"><a href=""></a></span>
+<span id="cb1-17"><a href=""></a>ds.to_netcdf(<span class="st">"my_data_processed.nc"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="footer">
 <p><a href="https://movement.neuroinformatics.dev/">movement.neuroinformatics.dev</a></p>
 </div>
