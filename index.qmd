@@ -217,10 +217,10 @@ Established 2020 with three aims:
 
 ## Community
 :::{.incremental}
+* Focus on ease of use & accessibility
+* Responsive user & developer forums
 * Fully open development
 * Public development meetings
-* Responsive user & developer forums
-* Focus on ease of use & accessibility
 * &gt;3k contributions from >150 scientists & engineers
 * &gt;3M downloads
 :::
