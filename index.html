@@ -31,72 +31,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #383a42;  }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #383a42; } /* Normal */
-    code span.al { color: #95da4c; background-color: #4d1f24; font-weight: bold; } /* Alert */
-    code span.an { color: #50a14f; } /* Annotation */
-    code span.at { color: #a626a4; } /* Attribute */
-    code span.bn { color: #986801; } /* BaseN */
-    code span.bu { color: #a626a4; } /* BuiltIn */
-    code span.cf { color: #a626a4; } /* ControlFlow */
-    code span.ch { color: #50a14f; } /* Char */
-    code span.cn { color: #986801; } /* Constant */
-    code span.co { color: #a0a1a7; font-style: italic; } /* Comment */
-    code span.cv { color: #e45649; font-style: italic; } /* CommentVar */
-    code span.do { color: #e45649; } /* Documentation */
-    code span.dt { color: #a626a4; } /* DataType */
-    code span.dv { color: #986801; } /* DecVal */
-    code span.er { color: #f44747; text-decoration: underline; } /* Error */
-    code span.ex { color: #4078f2; font-weight: bold; } /* Extension */
-    code span.fl { color: #986801; } /* Float */
-    code span.fu { color: #4078f2; } /* Function */
-    code span.im { color: #50a14f; } /* Import */
-    code span.in { color: #c45b00; } /* Information */
-    code span.kw { color: #a626a4; } /* Keyword */
-    code span.op { color: #a626a4; } /* Operator */
-    code span.ot { color: #27ae60; } /* Other */
-    code span.pp { color: #a626a4; } /* Preprocessor */
-    code span.re { color: #2980b9; background-color: #153042; } /* RegionMarker */
-    code span.sc { color: #0184bc; } /* SpecialChar */
-    code span.ss { color: #da4453; } /* SpecialString */
-    code span.st { color: #50a14f; } /* String */
-    code span.va { color: #e45649; } /* Variable */
-    code span.vs { color: #da4453; } /* VerbatimString */
-    code span.wa { color: #da4453; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-2e9c2b88267167b91cc81db932c94e8e.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -229,7 +163,6 @@ Adam Tyson
 <h2>What we do</h2>
 <ul>
 <li class="fragment">Data standardisation and management</li>
-<li class="fragment">Developer tools</li>
 <li class="fragment">Extracellular electrophysiology analysis</li>
 <li class="fragment">Computational neuroanatomy</li>
 <li class="fragment">Video behavioural analysis</li>
@@ -240,7 +173,6 @@ Adam Tyson
 <h2>What we do</h2>
 <ul>
 <li>Data standardisation and management</li>
-<li>Developer tools</li>
 <li>Extracellular electrophysiology analysis</li>
 <li><strong>Computational neuroanatomy</strong></li>
 <li><strong>Video behavioural analysis</strong></li>
@@ -256,66 +188,24 @@ Adam Tyson
 <h2>BrainGlobe</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
-<p>Established 2020 with three aims:</p>
+<p>Three aims:</p>
 <ol type="1">
-<li class="fragment">Develop general-purpose tools to help others build interoperable software</li>
-<li class="fragment">Develop specialist software for specific analysis and visualisation needs</li>
-<li class="fragment">Build an ecosystem and community of computational neuroanatomy tools and users</li>
+<li class="fragment">Build tools for specific analysis and visualisation needs</li>
+<li class="fragment">Develop infrastructure for others to build on</li>
+<li class="fragment">Foster a community of users and developers</li>
 </ol>
 </div><div class="column" style="width:45%;">
 <p><img data-src="img/tracing.png"></p>
 </div></div>
+<div class="footer">
+<p><a href="https://brainglobe.info">brainglobe.info</a></p>
+</div>
 </section>
 <section id="brainglobe-atlas-api" class="slide level2">
 <h2>BrainGlobe Atlas API</h2>
-<h3 id="brainglobe-atlasapi"><a href="https://github.com/brainglobe/brainglobe-atlasapi"><code>brainglobe-atlasapi</code></a></h3>
 
 <img data-src="img/atlas.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
 <p><a href="https://doi.org/10.21105/joss.02668">Claudi, Petrucco, Tyson et al.&nbsp;JOSS (2020)</a></p>
-</div>
-</section>
-<section id="image-processing" class="slide level2">
-<h2>Image processing</h2>
-<h3 id="brainreg"><a href="https://github.com/brainglobe/brainreg"><code>brainreg</code></a></h3>
-<h3 id="brainglobe-registration"><a href="https://github.com/brainglobe/brainglobe-registration"><code>brainglobe-registration</code></a></h3>
-
-<img data-src="img/annotations_front_light_mode.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
-<p><a href="https://doi.org/10.1038/s41598-021-04676-9">Tyson, A. L., et al.&nbsp;(2022) “Accurate determination of marker location within whole-brain microscopy images” Scientific Reports, 12, 867</a></p>
-</div>
-<div class="footer">
-<p><a href="https://github.com/brainglobe/brainglobe-registration">github.com/brainglobe/brainglobe-registration</a></p>
-</div>
-</section>
-<section id="analysis" class="slide level2">
-<h2>Analysis</h2>
-<h3 id="cellfinder"><a href="https://github.com/brainglobe/cellfinder"><code>cellfinder</code></a></h3>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/cells.png" class="quarto-figure quarto-figure-center" style="width:65.0%"></p>
-</figure>
-</div>
-<div class="footer">
-<p><a href="https://doi.org/10.1371/journal.pcbi.1009074">Tyson, A. L. et al.&nbsp;(2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets” PLoS Comp Biol 17(5): e1009074.</a></p>
-</div>
-</section>
-<section id="visualisation" class="slide level2">
-<h2>Visualisation</h2>
-<h3 id="brainrender"><a href="https://github.com/brainglobe/brainrender"><code>brainrender</code></a></h3>
-<p><video data-src="img/cellfinder_small.mp4" class="absolute nostretch" style="left: 10%; width: 80%; " loop="true" controls=""><a href="img/cellfinder_small.mp4">Video</a></video></p>
-<div class="footer">
-<p><a href="https://doi.org/10.7554/eLife.65751">Claudi, F. et al.&nbsp;(2021) “Visualizing anatomically registered data with Brainrender” eLife</a></p>
-</div>
-<div class="footer">
-<p><a href="https://github.com/brainglobe/brainglobe-stitch">github.com/brainglobe/brainglobe-stitch</a></p>
-</div>
-</section>
-<section id="novel-atlases" class="slide level2">
-<h2>Novel atlases</h2>
-<h3 id="brainglobe-template-builder"><a href="https://github.com/brainglobe/brainglobe-template-builder"><code>brainglobe-template-builder</code></a></h3>
-
-<img data-src="img/blackcap.gif" class="quarto-figure quarto-figure-center r-stretch"><p>Eurasian blackcap (Sylvia atricapilla)</p>
-<div class="footer">
-<p><a href="https://doi.org/10.1016/j.cub.2026.03.034">Sirmpilatze, Felder, Abdulazhanova et al.&nbsp;Current Biology (2026)</a></p>
 </div>
 </section>
 <section id="community" class="slide level2">
@@ -325,35 +215,24 @@ Adam Tyson
 <li class="fragment">Responsive user &amp; developer forums</li>
 <li class="fragment">Fully open development</li>
 <li class="fragment">Public development meetings</li>
-<li class="fragment">&gt;3k contributions from &gt;150 scientists &amp; engineers</li>
 <li class="fragment">&gt;3M downloads</li>
+<li class="fragment">&gt;3k contributions from &gt;150 scientists &amp; engineers</li>
 </ul>
+<div class="footer">
+<p><a href="https://brainglobe.info">brainglobe.info</a></p>
+</div>
 </section></section>
 <section>
 <section id="behaviour" class="title-slide slide level1 center">
 <h1>Behaviour</h1>
 
 </section>
-<section id="markerless-pose-estimation" class="slide level2">
-<h2>Markerless pose estimation</h2>
-<div class="quarto-layout-panel" data-layout="[[45, 55]]">
-<div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 45.0%;justify-content: center;">
-<p><img data-src="img/pose_tracking.png"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 55.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/sleap_video.gif"></p>
-<figcaption><a href="https://sleap.ai/">sleap.ai</a> (Pereira et al.&nbsp;2022)</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="markerless-pose-estimation-1" class="slide level2">
-<h2>Markerless pose estimation</h2>
+<section id="computer-vision-for-behaviour" class="slide level2">
+<h2>Computer vision for behaviour</h2>
+
+<img data-src="img/gap_after_tracking.png" style="clip-path: inset(0 43% 0 0);" class="r-stretch"></section>
+<section id="computer-vision-for-behaviour-1" class="slide level2">
+<h2>Computer vision for behaviour</h2>
 
 <img data-src="img/gap_after_tracking.png" class="r-stretch"></section>
 <section id="movement" class="slide level2">
@@ -363,37 +242,15 @@ Adam Tyson
 <p><a href="https://movement.neuroinformatics.dev/">movement.neuroinformatics.dev</a></p>
 </div>
 </section>
-<section id="movement-gui" class="slide level2">
-<h2><code>movement</code> GUI</h2>
-<p><video data-src="img/movement_rois.mp4" class="absolute nostretch" style="left: 5%; width: 90%; " loop="true" controls=""><a href="img/movement_rois.mp4">Video</a></video></p>
-<div class="footer">
-<p><a href="https://movement.neuroinformatics.dev/">movement.neuroinformatics.dev</a></p>
-</div>
-</section>
-<section id="movement-scripting" class="slide level2">
-<h2><code>movement</code> scripting</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">from</span> movement.io <span class="im">import</span> load_dataset</span>
-<span id="cb1-2"><a href=""></a><span class="im">from</span> movement.filtering <span class="im">import</span> rolling_filter</span>
-<span id="cb1-3"><a href=""></a><span class="im">from</span> movement.kinematics <span class="im">import</span> compute_speed</span>
-<span id="cb1-4"><a href=""></a></span>
-<span id="cb1-5"><a href=""></a>ds <span class="op">=</span> load_dataset(</span>
-<span id="cb1-6"><a href=""></a>  <span class="st">"path/to/my_data.h5"</span>, source_software<span class="op">=</span><span class="st">"DeepLabCut"</span>, fps<span class="op">=</span><span class="dv">30</span></span>
-<span id="cb1-7"><a href=""></a>)</span>
-<span id="cb1-8"><a href=""></a></span>
-<span id="cb1-9"><a href=""></a>ds <span class="op">=</span> ds.sel(time<span class="op">=</span><span class="bu">slice</span>(<span class="dv">600</span>, <span class="dv">2400</span>))</span>
-<span id="cb1-10"><a href=""></a></span>
-<span id="cb1-11"><a href=""></a>ds[<span class="st">"position_smooth"</span>] <span class="op">=</span> rolling_filter(</span>
-<span id="cb1-12"><a href=""></a>  ds[<span class="st">"position"</span>], window<span class="op">=</span><span class="dv">5</span>, statistic<span class="op">=</span><span class="st">"median"</span></span>
-<span id="cb1-13"><a href=""></a>)</span>
-<span id="cb1-14"><a href=""></a></span>
-<span id="cb1-15"><a href=""></a>ds[<span class="st">"speed"</span>] <span class="op">=</span> compute_speed(ds[<span class="st">"position_smooth"</span>])</span>
-<span id="cb1-16"><a href=""></a></span>
-<span id="cb1-17"><a href=""></a>ds.to_netcdf(<span class="st">"my_data_processed.nc"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="footer">
-<p><a href="https://movement.neuroinformatics.dev/">movement.neuroinformatics.dev</a></p>
-</div>
-</section>
+<section id="computer-vision-for-behaviour-2" class="slide level2">
+<h2>Computer vision for behaviour</h2>
+
+<img data-src="img/gap_after_tracking.png" style="clip-path: inset(0 43% 0 0);" class="r-stretch"></section>
 <section id="poseinterface" class="slide level2">
+<h2>PoseInterface</h2>
+
+<img data-src="img/poseinterface_overview.png" class="quarto-figure quarto-figure-center r-stretch" style="clip-path: inset(0 58% 0 0);"></section>
+<section id="poseinterface-1" class="slide level2">
 <h2>PoseInterface</h2>
 
 <img data-src="img/poseinterface_overview.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
@@ -415,10 +272,10 @@ Adam Tyson
 <section id="long-term-priorities" class="slide level2">
 <h2>Long-term priorities</h2>
 <ul>
-<li>Enable community collaboration</li>
-<li>Reduce duplication of effort</li>
-<li>Ensure interopability</li>
-<li>Sustainability</li>
+<li class="fragment">Bring community together</li>
+<li class="fragment">Reduce duplication of effort</li>
+<li class="fragment">Ensure interopability</li>
+<li class="fragment">Sustainability</li>
 </ul>
 </section></section>
 <section>
