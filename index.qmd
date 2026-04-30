@@ -22,7 +22,6 @@ To build build sustainable, general-purpose software infrastructure for the neur
 ## What we do
 :::{.incremental}
 * Data standardisation and management
-* Developer tools
 * Extracellular electrophysiology analysis
 * Computational neuroanatomy
 * Video behavioural analysis
@@ -31,7 +30,6 @@ To build build sustainable, general-purpose software infrastructure for the neur
 
 ## What we do
 * Data standardisation and management
-* Developer tools
 * Extracellular electrophysiology analysis
 * **Computational neuroanatomy**
 * **Video behavioural analysis**
@@ -45,12 +43,12 @@ To build build sustainable, general-purpose software infrastructure for the neur
 
 ::: {.columns}
 ::: {.column width="55%"}
-Established 2020 with three aims:
+Three aims:
 
 :::{.incremental}
-1. Develop general-purpose tools to help others build interoperable software
-2. Develop specialist software for specific analysis and visualisation needs
-3. Build an ecosystem and community of computational neuroanatomy tools and users
+1. Build tools for specific analysis and visualisation needs 
+2. Develop infrastructure for others to build on
+3. Foster a community of users and developers
 :::
 
 :::
@@ -59,68 +57,17 @@ Established 2020 with three aims:
 :::
 :::
 
-
+::: footer
+[brainglobe.info](https://brainglobe.info)
+:::
 
 ## BrainGlobe Atlas API
-### [`brainglobe-atlasapi`](https://github.com/brainglobe/brainglobe-atlasapi)
 ![](img/atlas.png){fig-align="center"}
 
 ::: footer
 [Claudi, Petrucco, Tyson et al. JOSS (2020)](https://doi.org/10.21105/joss.02668)
 :::
 
-## Image processing
-### [`brainreg`](https://github.com/brainglobe/brainreg)
-### [`brainglobe-registration`](https://github.com/brainglobe/brainglobe-registration)
-![](img/annotations_front_light_mode.png){fig-align="center"}
-
-::: footer
-[Tyson, A. L., et al. (2022) “Accurate determination of marker location within whole-brain microscopy images” Scientific Reports, 12, 867](https://doi.org/10.1038/s41598-021-04676-9)
-:::
-
-::: footer
-[github.com/brainglobe/brainglobe-registration](https://github.com/brainglobe/brainglobe-registration)
-:::
-
-
-## Analysis
-
-### [`cellfinder`](https://github.com/brainglobe/cellfinder)
-
-![](img/cells.png){.nostretch fig-align="center" width="65%"}
-
-
-::: footer
-[Tyson, A. L. et al. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLoS Comp Biol 17(5): e1009074.](https://doi.org/10.1371/journal.pcbi.1009074)
-:::
-
-## Visualisation
-
-### [`brainrender`](https://github.com/brainglobe/brainrender)
-
-![](img/cellfinder_small.mp4){.absolute .nostretch width="80%" left="10%" loop="true"}
-
-
-::: footer
-[Claudi, F. et al. (2021) “Visualizing anatomically registered data with Brainrender” eLife](https://doi.org/10.7554/eLife.65751)
-:::
-
-
-
-::: footer
-[github.com/brainglobe/brainglobe-stitch](https://github.com/brainglobe/brainglobe-stitch)
-:::
-
-
-## Novel atlases
-### [`brainglobe-template-builder`](https://github.com/brainglobe/brainglobe-template-builder)
-![](img/blackcap.gif){fig-align="center"}
-
- Eurasian blackcap (Sylvia atricapilla)
-
-::: footer
-[Sirmpilatze, Felder, Abdulazhanova et al. Current Biology (2026)](https://doi.org/10.1016/j.cub.2026.03.034)
-:::
 
 ## Community
 :::{.incremental}
@@ -128,31 +75,28 @@ Established 2020 with three aims:
 * Responsive user & developer forums
 * Fully open development
 * Public development meetings
-* &gt;3k contributions from >150 scientists & engineers
 * &gt;3M downloads
+* &gt;3k contributions from >150 scientists & engineers
+:::
+
+::: footer
+[brainglobe.info](https://brainglobe.info)
 :::
 
 
 # Behaviour
 
 
-## Markerless pose estimation
-
-::: {layout="[[45, 55]]" layout-valign="center"}
-
-![](img/pose_tracking.png)
-
-![[sleap.ai](https://sleap.ai/) (Pereira et al. 2022)](img/sleap_video.gif)
-
-:::
 
 
 
-## Markerless pose estimation
+## Computer vision for behaviour
 
+![](img/gap_after_tracking.png){style="clip-path: inset(0 43% 0 0);"}
+
+## Computer vision for behaviour
 
 ![](img/gap_after_tracking.png)
-
 
 ## `movement`
 
@@ -163,42 +107,13 @@ Established 2020 with three aims:
 [movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/)
 :::
 
-## `movement` GUI
+## Computer vision for behaviour
 
-![](img/movement_rois.mp4){.absolute .nostretch width="90%" left="5%" loop="true"}
-
-
-
-::: footer
-[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/)
-:::
+![](img/gap_after_tracking.png){style="clip-path: inset(0 43% 0 0);"}
 
 
-## `movement` scripting 
-
-
-```{.python}
-from movement.io import load_dataset
-from movement.filtering import rolling_filter
-from movement.kinematics import compute_speed
-
-ds = load_dataset(
-  "path/to/my_data.h5", source_software="DeepLabCut", fps=30
-)
-
-ds = ds.sel(time=slice(600, 2400))
-
-ds["position_smooth"] = rolling_filter(
-  ds["position"], window=5, statistic="median"
-)
-
-ds["speed"] = compute_speed(ds["position_smooth"])
-
-ds.to_netcdf("my_data_processed.nc")
-```
-::: footer
-[movement.neuroinformatics.dev](https://movement.neuroinformatics.dev/)
-:::
+## PoseInterface
+![](img/poseinterface_overview.png){fig-align="center"style="clip-path: inset(0 58% 0 0);"}
 
 ## PoseInterface
 ![](img/poseinterface_overview.png){fig-align="center"}
@@ -218,10 +133,12 @@ ds.to_netcdf("my_data_processed.nc")
 :::
 
 ## Long-term priorities
-- Enable community collaboration
+:::{.incremental}
+- Bring community together
 - Reduce duplication of effort
 - Ensure interopability
 - Sustainability
+:::
 
 # Thanks
 
