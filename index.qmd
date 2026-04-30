@@ -22,7 +22,6 @@ To build build sustainable, general-purpose software infrastructure for the neur
 ## What we do
 :::{.incremental}
 * Data standardisation and management
-* Developer tools
 * Extracellular electrophysiology analysis
 * Computational neuroanatomy
 * Video behavioural analysis
@@ -31,7 +30,6 @@ To build build sustainable, general-purpose software infrastructure for the neur
 
 ## What we do
 * Data standardisation and management
-* Developer tools
 * Extracellular electrophysiology analysis
 * **Computational neuroanatomy**
 * **Video behavioural analysis**
