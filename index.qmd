@@ -218,10 +218,12 @@ ds.to_netcdf("my_data_processed.nc")
 :::
 
 ## Long-term priorities
+:::{.incremental}
 - Enable community collaboration
 - Reduce duplication of effort
 - Ensure interopability
 - Sustainability
+:::
 
 # Thanks
 
