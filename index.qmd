@@ -77,8 +77,8 @@ Three aims:
 * Responsive user & developer forums
 * Fully open development
 * Public development meetings
-* &gt;3k contributions from >150 scientists & engineers
 * &gt;3M downloads
+* &gt;3k contributions from >150 scientists & engineers
 :::
 
 ::: footer
