@@ -9,7 +9,7 @@ format:
 
 #
 
-To build build sustainable, general-purpose software infrastructure for the neuroscience community
+To build sustainable, general-purpose software infrastructure for the neuroscience community
 
 # About us
 
